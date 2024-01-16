@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>RMD - Home</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+<main>
+    <h1 class="visually-hidden">RMD - Your Logistics Partner</h1>
+
+    <div class="px-4 py-5 my-5 text-center">
+        <img class="d-block mx-auto mb-4" src="assets/img/RMD.png" alt="RMS Logo" width="250" height="200" >
+        <h1 class="display-6 fw-bold">
+            <span id="typewriter-text"></span>
+        </h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">
+                RMD delivers more than cargo; we offer peace of mind. Our services include expert trucking, secure packaging, modern storage, efficient logistics, and reliable cargo solutions. Your goods are handled with care. Experience RMD's excellence, your trusted transportation and logistics partner.
+            </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <a href="services.html" class="btn btn-primary btn-lg px-4 gap-3">Explore Services</a>
+              <a href="contact.html" class="btn btn-outline-secondary btn-lg px-4">Contact Us</a>
+          </div>
+        </div>
+    </div>
+
+    <script>
+        const texts = [
+        
+            "Loyalty is our priority",
+            "Delivering Excellence Every Mile",
+            "Your Trusted Logistics Partner"
+        ];
+        const textElement = document.getElementById("typewriter-text");
+        let textIndex = 0;
+        let index = 0;
+
+        function typeWriter() {
+            if (index < texts[textIndex].length) {
+                textElement.textContent += texts[textIndex].charAt(index);
+                index++;
+                setTimeout(typeWriter, 100); // Adjust the time delay for typing speed
+            } else {
+                // Move to the next text when finished typing
+                setTimeout(function () {
+                    index = 0;
+                    textIndex = (textIndex + 1) % texts.length; // Cycle through the texts
+                    textElement.textContent = "";
+                    typeWriter();
+                }, 1000); // Adjust the time delay before moving to the next text
+            }
+        }
+
+        typeWriter(); // Start the typewriter effect when the page loads
+    </script>
+</main>
+
+
+
